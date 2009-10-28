@@ -1,6 +1,6 @@
-#include "figure.hpp"
+#include "../include/figure.hpp"
 
-void Figure::setColour(float r, float g, float b){
+void Figure::setColor(float r, float g, float b){
 
   red = r;
   green = g;

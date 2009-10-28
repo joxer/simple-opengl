@@ -16,11 +16,10 @@ public:
   ~Point();
   float getX();
   float getY();
-  
   void setX(float);
   void setY(float);
   void setXY(float, float);
-  void setColor(float, float, float);
+
 private:
   void repaint();
 };

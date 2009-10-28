@@ -8,8 +8,9 @@
 class Figure{
 
   float x, y;
+  float w, h;
   float red, green, blue;
 public:
-  virtual void setColour(float r, float g , float );  
+  virtual void setColor(float , float  , float );  
 
 };

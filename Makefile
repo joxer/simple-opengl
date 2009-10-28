@@ -1,6 +1,6 @@
 CC = gcc
 FILES = main.c
-CPP_FILES = square.cpp point.cpp figure.cpp
+CPP_FILES = src/square.cpp src/point.cpp src/figure.cpp
 OBJ_FILES = square.o point.o figure.o
 
 main:

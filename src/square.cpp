@@ -1,4 +1,4 @@
-#include "square.hpp"
+#include "../include/square.hpp"
 
 Square::Square(){
   
@@ -63,12 +63,6 @@ float Square::getW(){
 }
 float Square::getH(){
   return h;
-}
-
-void Square::setColor(float r, float g, float b){
-  red = r;
-  green = g;
-  blue = b;
 }
 
 void Square::repaint(){

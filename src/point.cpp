@@ -1,4 +1,4 @@
-#include "point.hpp"
+#include "../include/point.hpp"
 
 Point::Point(){
   x = 0;
@@ -64,12 +64,6 @@ void Point::repaint(){
     glVertex3f(0.5, 0.5, 0.0); //third corner at 0.5, 0.5
     glVertex3f(0.5, -0.5, 0.0); //fourth corner at 0.5, -0.5
     glEnd(); //end the shape we are currently working on
-}
-
-void Point::setColor(float r, float g, float b){
-  red = r;
-  green = g;
-  blue = b;
 }
 
 Point::~Point(){

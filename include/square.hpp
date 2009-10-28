@@ -7,6 +7,7 @@
 /* Square helper class*/
 
 class Square:public Figure {
+
   
   float x, y; // x && y
   float w, h; // width && height
@@ -28,7 +29,6 @@ public:
   float getW();
   float getH();
   
-  void setColor(float, float, float);
-  
+private:  
   void repaint();
 };
