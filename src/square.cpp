@@ -10,7 +10,7 @@ Square::Square(){
   green = 0.0;
   blue = 0.0;
   glColor3f(DEFAULT_COLOR); //set the default color to black
-  repaint();
+  repaint(NULL);
 }
 
 
@@ -24,7 +24,7 @@ Square::Square(float xx, float yy, float ww, float hh): x(xx), y(yy) {
     green = 0.0;
     blue = 0.0;
     glColor3f(DEFAULT_COLOR); //set the default color to black
-    repaint();
+    repaint(NULL);
   }
   catch(ValueNotDefinited e){
     e.reason();
@@ -39,7 +39,7 @@ Square::Square(float xx, float yy, float ww, float hh, float r, float g, float b
     h = hh;
     
     glColor3f(r, g, b); 
-    repaint();
+    repaint(NULL);
   }catch(ValueNotDefinited e){
     e.reason();
   }
@@ -47,19 +47,19 @@ Square::Square(float xx, float yy, float ww, float hh, float r, float g, float b
 
 void Square::setX(float xx){
   x = xx;
-  repaint();
+  repaint(NULL);
 }
 void Square::setY(float yy){
   y = yy;
-  repaint();
+  repaint(NULL);
 }
 void Square::setW(float ww){
   w = ww;
-  repaint();
+  repaint(NULL);
 }
 void Square::setH(float hh){
   h = hh;
-  repaint();
+  repaint(NULL);
 }
 
 float Square::getX() const{
@@ -75,7 +75,7 @@ float Square::getH() const{
   return h;
 }
 
-void Square::repaint(){
+void Square::repaint(float){
   glColor3f(red, green, blue);
   glBegin(GL_QUADS);
   glVertex2d(x, y); 

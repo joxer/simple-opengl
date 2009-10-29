@@ -6,7 +6,7 @@
 #endif
 /* Point helper class */
 
-class Point {
+class Point: public Figure {
   int x, y;
   float red, green, blue;
 public:

@@ -15,18 +15,21 @@
 
 class Circle: public Figure {
   float x, y;
-  double r;
+  double r; //radius
   float red, green, blue;
 public:
-  Circle();
+  
   Circle(float, float,float);
   Circle(float, float, float , float , float, float);
   ~Circle();
   float getX();
   float getY();
+  float getRadius();
   void setX(float);
   void setY(float);
+  void setRadius(float);
   void setXY(float, float);
+  
 private:
   void repaint(float);
   

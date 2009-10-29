@@ -3,27 +3,23 @@
 Point::Point(){
   x = 0;
   y = 0;
-  glColor3f(DEFAULT_COLOR);
-  glBegin(GL_POINTS);
-  glVertex2d(x, y);
-  glEnd();
-  glColor3f(DEFAULT_COLOR); //set the default color to black
+  red = 0.0;
+  green = 0.0;
+  blue = 0.0;
+  repaint();
 
-}
-
-Point::Point(int xx, int yy, float r, float g, float b): x(xx), y(yy), red(r), green(g), blue(b){
-  glColor3f(red, green, blue);
-  glBegin(GL_POINTS);
-  glVertex2d(x, y);
-  glEnd();
-  glColor3f(DEFAULT_COLOR); //set the default color to black
 }
 
 Point::Point(int xx, int yy): x(xx), y(yy){
-  glColor3f(DEFAULT_COLOR); //set the default color to black
-  glBegin(GL_POINTS);
-  glVertex2d(x, y);
-  glEnd();
+  red = 0.0;
+  green = 0.0;
+  blue = 0.0;
+  repaint();
+}
+
+Point::Point(int xx, int yy, float r, float g, float b): x(xx), y(yy), red(r), green(g), blue(b){
+  
+  repaint();
 }
 
 float Point::getX(){
@@ -37,12 +33,9 @@ float Point::getY(){
 void Point::setX(float xx){
   x = xx;
   repaint();
-  
 }
 
 void Point::setY(float yy){
-
-
   y = yy;
   repaint();
 }
@@ -55,11 +48,11 @@ void Point::setXY(float xx, float yy){
 }
 
 void Point::repaint(){
-  glColor3f(red, green, blue);
+  setColor(red, green, blue);
   glBegin(GL_POINTS);
   glVertex2d(x, y);
   glEnd();
- 
+  setColor(DEFAULT_COLOR);
 }
 
 Point::~Point(){

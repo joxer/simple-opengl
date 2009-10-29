@@ -33,6 +33,6 @@ public:
   float getW() const;
   float getH() const;
   
-private:
-  void repaint();
+public:
+  void repaint(float);
 };

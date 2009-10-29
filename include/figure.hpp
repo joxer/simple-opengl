@@ -13,7 +13,8 @@ class Figure{
   
 public:
   virtual void setColor(float , float  , float );  
-
+private:
+  virtual void repaint(float) = 0;
 };
 
 #endif

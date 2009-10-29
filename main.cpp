@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include <math.h>
 #include "include/square.hpp"
-#include "include/circle.hpp"
+#include "include/triangle.hpp"
 
 void display(void);
 void reshape(int w, int h);
@@ -49,8 +49,9 @@ void reshape (int w, int h) {
 }
 
 void random_point(void){
-  Circle c(0,0,0.1, 0.5, 0.1, 0.2);
-  Circle e(1,0,0.2, 0.2, 1, 0.3);
-   //Square r(0.0, 1.0, 0.3, 0.5, 1, 1, 1);
-   //Square d(1.0, 1.0, 0.3, 0.5, 1, 1, 1);
+  //  Circle c(0,0,0.1);
+  //Circle e(1,0,0.2);
+  Triangle r( 2.0, 2.0);
+  Triangle a(1,1, 2.0, 2.0);
+  Square d(1.0, 1.0, 0.3, 0.5, 1, 1, 1);
 }
