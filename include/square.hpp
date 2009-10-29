@@ -4,6 +4,11 @@
 #ifndef FIGURE_HPP
 #include "figure.hpp"
 #endif
+#ifndef EXCEPTIONS_HPP
+#include "exceptions.hpp"
+#endif
+
+
 /* Square helper class*/
 
 class Square:public Figure {
@@ -14,7 +19,6 @@ class Square:public Figure {
   float red, green, blue;
 public:
   Square();
-  Square(float, float);
   Square(float, float, float, float);
   Square(float, float, float, float, float, float, float);
   ~Square();
@@ -24,11 +28,11 @@ public:
   void setW(float);
   void setH(float);
   
-  float getX();
-  float getY();
-  float getW();
-  float getH();
+  float getX() const;
+  float getY() const;
+  float getW() const;
+  float getH() const;
   
-private:  
+private:
   void repaint();
 };
