@@ -2,7 +2,5 @@
 
 void Figure::setColor(float r, float g, float b){
 
-  red = r;
-  green = g;
-  blue = b;
+  glColor3f(r, g, b);
 }

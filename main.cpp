@@ -7,15 +7,14 @@
 #include <unistd.h>
 #include <math.h>
 #include "include/square.hpp"
-using namespace std;
+#include "include/circle.hpp"
 
 void display(void);
 void reshape(int w, int h);
 void random_point();
 void motion(int, int);
 
-float xx = 0;
-float yy = 0;
+
 
 int main(int argc, char **argv){
 
@@ -50,15 +49,8 @@ void reshape (int w, int h) {
 }
 
 void random_point(void){
-  float i = 0;
-  for(i = 0; i < 1; i += 0.1){
-    Square s(0.0+i, 0.0, 1.0,0.01, 0.5, 0.3, 0.9);
-    s.repaint();
-  }
-
-   for(i = 0; i < 1; i += 0.1){
-     Square s(0.0+i, 0.0+i, 1.0,0.05, 0.01, 0.3, 0.9);
-     s.setColor(0.6,0.2, 0.1);
-    s.repaint();
-  }
+  Circle c(0,0,0.1, 0.5, 0.1, 0.2);
+  Circle e(1,0,0.2, 0.2, 1, 0.3);
+   //Square r(0.0, 1.0, 0.3, 0.5, 1, 1, 1);
+   //Square d(1.0, 1.0, 0.3, 0.5, 1, 1, 1);
 }

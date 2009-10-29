@@ -42,28 +42,24 @@ void Point::setX(float xx){
 
 void Point::setY(float yy){
 
-  repaint();
+
   y = yy;
+  repaint();
 }
 
 void Point::setXY(float xx, float yy){
- x = xx;
+  x = xx;
   y = yy;
   repaint();
   
 }
 
 void Point::repaint(){
-  /*  glColor3f(red, green, blue);
+  glColor3f(red, green, blue);
   glBegin(GL_POINTS);
   glVertex2d(x, y);
-  glEnd();*/
-  glBegin(GL_QUADS); //begin the four sided shape
-    glVertex3f(-0.5, -0.5, 0.0); //first corner at -0.5, -0.5
-    glVertex3f(-0.5, 0.5, 0.0); //second corner at -0.5, 0.5
-    glVertex3f(0.5, 0.5, 0.0); //third corner at 0.5, 0.5
-    glVertex3f(0.5, -0.5, 0.0); //fourth corner at 0.5, -0.5
-    glEnd(); //end the shape we are currently working on
+  glEnd();
+ 
 }
 
 Point::~Point(){
